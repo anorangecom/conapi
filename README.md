@@ -1,2 +1,61 @@
 # ConAPI
-Connection API - unified API wrapper around eComm marketplaces 
+
+
+# Описание  
+ConAPI - Connection API, библиотека-обертка (wrapper) на Python/Django позволяющая работать с API различных маркетплейсов:
+1. Вайлдберис
+2. Озон
+3. ЯндексМаркет
+4. АлиЭкспресс (Россия)
+5. СберМакрет
+
+
+## Цель  
+Целью задания является реализация независимого модуля "обертки" (wrapper) на Python/Django позволяющего работать с API маркетплейса Wildberries (wildberries.ru)
+
+
+## Python методы для реализации:
+check_creds(token) - проверка доступа для токена
+get_prds(filter) - список товаров продавца на МП
+get_prd(prd_id) - полный агрегированный набор данных по товару (атрибутуты, цены, остатки, модели продаж, итд) 
+set_prd(prd_id) - изменение произвольного атрибута товара
+get_categories(filter) - получение списка категорий МП
+get_orders(filter) - получение списка заказов
+get_comission(prd_id) - получение данных по комисси для товара
+
+
+
+# Кэширование (опционально)
+TODO Описать модель и реалиизацию кэшеирования
+
+
+# Тесты: 
+TODO Описать запуск тестов
+
+
+# Установка
+TODO Описать процесс установки
+
+
+
+
+
+
+
+
+
+
+# References
+
+## Документация по API
+Документация по API ВБ https://dev.wildberries.ru/
+Документация по API Озон https://docs.ozon.ru/api/seller/
+
+
+## Материалы по Django:
+https://www.w3schools.com/django/
+https://www.geeksforgeeks.org/django-tutorial/
+https://docs.djangoproject.com/en/5.2/
+
+   
+   
