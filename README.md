@@ -9,9 +9,8 @@ ConAPI - Connection API, библиотека-обертка (wrapper) на Pyth
 4. АлиЭкспресс (Россия)
 5. СберМакрет
 
-
 ## Цель  
-Целью задания является реализация независимого модуля "обертки" (wrapper) на Python/Django позволяющего работать с API маркетплейса Wildberries (wildberries.ru)
+Целью разработки библиотеки является значительное упрощение работы с маркетплейсами за счет унификации работы с API. 
 
 
 ## Python методы для реализации:
@@ -22,6 +21,7 @@ set_prd(prd_id) - изменение произвольного атрибута
 get_categories(filter) - получение списка категорий МП
 get_orders(filter) - получение списка заказов
 get_comission(prd_id) - получение данных по комисси для товара
+
 
 
 
@@ -39,23 +39,17 @@ TODO Описать процесс установки
 
 
 
-
-
-
-
-
-
 # References
 
 ## Документация по API
-Документация по API ВБ https://dev.wildberries.ru/
-Документация по API Озон https://docs.ozon.ru/api/seller/
+- Документация по API ВБ https://dev.wildberries.ru/
+- Документация по API Озон https://docs.ozon.ru/api/seller/
 
 
 ## Материалы по Django:
-https://www.w3schools.com/django/
-https://www.geeksforgeeks.org/django-tutorial/
-https://docs.djangoproject.com/en/5.2/
+- https://www.w3schools.com/django/
+- https://www.geeksforgeeks.org/django-tutorial/
+- https://docs.djangoproject.com/en/5.2/
 
    
    
