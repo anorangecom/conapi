@@ -45,27 +45,29 @@ Connection API - unified API wrapper around eComm marketplaces
 код задания реализован и выложен в Git репозитарий на https://github.com
 
 
-# Полезные материалы/инструменты, которые пригодятся для выполнения задания:
-
-## Документация по API
-Документация по API ВБ https://dev.wildberries.ru/
-Документация по API Озон https://docs.ozon.ru/api/seller/
-
-
-
-## Учебные материалы по Django:
-https://www.w3schools.com/django/
-https://www.geeksforgeeks.org/django-tutorial/
-https://docs.djangoproject.com/en/5.2/
-
+# Полезные материалы/инструменты:
+- Документация по API маркетплейсов приведена в файле README.md
+- Учебные материалы по Django есть в файле README.md
    
+
 
    
 # Дополнительные вводные, которые могут понадобиться
+1. Для выполнения задания дана ссылка на этот Git репозиторий GitHub
 
-1. Для выполнения задания будет дан доступ к Git репозиторию на bitbucket.com
-
-2. Для выполнения задания будет создан тестовый токен магазина Wildberries
+2. Для выполнения задания запросите тестовый токен магазина на  Wildberries послав сообщенеи на тг @leshmor
 
 3. Мы доступны для любых вопросов по реализации, API, продукту, итд через телеграм, звонок, итд
 
+4. Разница между Djangpo Package и Python Library 
+https://stackoverflow.com/questions/11429862/whats-the-difference-between-a-django-package-and-a-python-library
+
+
+
+## Подготовка к заданию:
+
+1. Получите код проекта локально на комптютер (склонируйте). Предварительно у вас должна быть учетная запись на GitHub и настроены SSH ключи https://github.com/settings/keys
+
+git clone git@github.com:anorangecom/conapi.git
+
+2. 
