@@ -14,8 +14,8 @@ api = WildberriesAPIWrapper()
 
 # Получение списка товаров
 products = api.get_prds()
-# for product in products[:5]:
-print(products)
+for product in products:
+    print(product)
 
 # # Получение деталей товара
 # product_details = api.get_prd('NM_ID')
