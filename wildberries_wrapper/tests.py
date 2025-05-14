@@ -12,7 +12,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 TOKEN = 'FAKE-TOKEN-FOR-TESTING' # Мокируем реальный токен фейковым 'FAKE-TOKEN-FOR-TESTING'
-BASE_URL='https://content-api.wildberries.ru/content/v2'
+BASE_URL='https://content-api.wildberries.ru'
 
 class WildberriesAPITest(TestCase):
     """
@@ -43,7 +43,7 @@ class WildberriesAPITest(TestCase):
         
         # Проверка, что метод сделал запрос с нужными параметрами
         mock_get.assert_called_once_with(
-            f"{self.base_url}/supplier/stocks",
+            f"{self.base_url}/content/v2/object/parent/all",
             headers={"Authorization": f"Bearer {self.token}"},
             params={}  # Добавляем пустой словарь параметров
         )
@@ -53,7 +53,9 @@ class WildberriesAPITest(TestCase):
 
     @mock.patch.object(requests, 'get')
     def test_get_prd(self, mock_get):
-        """Тест метода get_prd."""
+        """
+        Тест метода get_prd.
+        """
         product_id = 12345
         mock_response = mock.Mock()
         mock_response.json.return_value = {"product": "product"}
@@ -64,7 +66,7 @@ class WildberriesAPITest(TestCase):
         
         # Проверка, что метод сделал запрос с нужным продуктом
         mock_get.assert_called_once_with(
-            f"{self.base_url}/supplier/cards?nmIds={product_id}",
+            f"{self.base_url}/content/v2/supplier/cards?nmIds={product_id}",
             headers={"Authorization": f"Bearer {self.token}"}
         )
         
@@ -73,7 +75,9 @@ class WildberriesAPITest(TestCase):
 
     @mock.patch.object(requests, 'patch')
     def test_set_prd(self, mock_patch):
-        """Тест метода set_prd."""
+        """
+        Тест метода set_prd.
+        """
         product_id = 12345
         update_data = {"price": 999}
         mock_response = mock.Mock()
@@ -85,7 +89,7 @@ class WildberriesAPITest(TestCase):
         
         # Проверка, что метод отправил patch-запрос с нужными данными
         mock_patch.assert_called_once_with(
-            f"{self.base_url}/supplier/cards/{product_id}",
+            f"{self.base_url}/content/v2/supplier/cards/{product_id}",
             json=update_data,
             headers={
                 "Authorization": f"Bearer {self.token}",
@@ -110,7 +114,7 @@ class WildberriesAPITest(TestCase):
         
         # Проверка, что метод сделал запрос на получение заказов
         mock_get.assert_called_once_with(
-            f"{self.base_url}/supplier/orders",
+            f"{self.base_url}/content/v2/supplier/orders",
             headers={"Authorization": f"Bearer {self.token}"},
             params={}  # Добавляем пустой словарь параметров
         )
@@ -134,7 +138,7 @@ class WildberriesAPITest(TestCase):
         
         # Проверка, что метод сделал запрос на получение комиссии
         mock_get.assert_called_once_with(
-            f"{self.base_url}/upplier/revenue?dateFrom={start_date}&dateTo={end_date}",
+            f"{self.base_url}/content/v2/upplier/revenue?dateFrom={start_date}&dateTo={end_date}",
             headers={"Authorization": f"Bearer {self.token}"}
         )
         
